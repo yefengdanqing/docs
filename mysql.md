@@ -59,10 +59,12 @@ Mysql：存储DAU、HAU最终结果，供业务方查询使用。
 分布式流计算所有数据会进行Shuffle，怎么才能保障左右两边流的要JOIN的数据会在相同的节点进行处理呢？在双流JOIN的场景，我们会利用JOIN中ON的联接key进行partition，确保两个流相同的联接key会在同一个节点处理。
 
 # 设计思路
+判新.jpg![判新](https://user-images.githubusercontent.com/13494606/122421900-4a77cb00-cfbf-11eb-8f8a-0e1569320ff7.jpg)
 
 ## 判新模块
 
 ![判新](/Users/skt/Documents/大禹重构/判新.jpg)
+
 
 ## 处理模块
 
